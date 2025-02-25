@@ -1,0 +1,158 @@
+/* Global Reset & Base Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Utility Classes */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Screen Reader Only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Top Bar & Utility Navigation */
+.top-bar {
+  background-color: #f1f1f1;
+  font-size: 0.9em;
+  padding: 5px 0;
+}
+.top-bar .location-selector select {
+  padding: 5px;
+}
+.top-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+.top-nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Main Header & Navigation */
+.main-header {
+  border-bottom: 1px solid #ddd;
+}
+.main-nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.logo img {
+  max-width: 250px;
+  height: auto;
+}
+.search-container form {
+  display: flex;
+  align-items: center;
+}
+.search-container input[type="search"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-right: none;
+  flex: 1;
+}
+.search-container .search-button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  cursor: pointer;
+}
+.user-actions a {
+  text-decoration: none;
+  color: #333;
+  margin-left: 15px;
+  display: inline-flex;
+  align-items: center;
+}
+.user-actions a i {
+  margin-right: 5px;
+}
+
+/* Category Navigation */
+.category-nav {
+  background-color: #333;
+}
+.category-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+.category-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+/* Footer */
+footer {
+  background-color: #f8f8f8;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+}
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+.footer-section h4 {
+  margin-bottom: 10px;
+}
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-section ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9em;
+}
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+.footer-links a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 10px;
+  font-size: 0.8em;
+}
+.product-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.product-card img:hover {
+  transform: scale(1.99);
+}
+.action-buttons button {
+  width: 100px;
+  padding: 10px;
+  margin: 5px;
+  font-size: 14px;
+}

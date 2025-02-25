@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Track Your Order - Shupping</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <a href="index.html" class="logo">Shupping</a>
+    </div>
+  </header>
+  <main class="container">
+    <h1>Track Your Order</h1>
+    <form action="/track-order" method="get">
+      <label for="order-id">Order ID:</label>
+      <input type="text" id="order-id" name="order-id" required />
+      
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required />
+      
+      <button type="submit">Track Order</button>
+    </form>
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Shupping. All Rights 2025.</p>
+    </div>
+  </footer>
+</body>
+</html>

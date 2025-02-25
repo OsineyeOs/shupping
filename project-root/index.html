@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shupping - Your One-Stop Shopping Destination</title>
+  <style>html { scroll-behavior: smooth; }</style>
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/home.css" />
+</head>
+<body>
+  <!-- Top Bar -->
+  <header class="main-header">
+    <div class="top-bar">
+      <div class="container">
+        <div class="location-selector">
+          <label for="country-select" class="sr-only">Select your country</label>
+          <select id="country-select" aria-label="Select your country">
+            <option value="us">United States</option>
+            <option value="uk">United Kingdom</option>
+            <option value="ca">Canada</option>
+            <option value="au">Australia</option>
+            <option value="in">India</option>
+            <option value="sg">Singapore</option>
+            <option value="de">Germany</option>
+            <option value="fr">France</option>
+            <option value="it">Italy</option>
+            <option value="es">Spain</option>
+            <option value="jp">Japan</option>
+            <option value="cn">China</option>
+            <option value="br">Brazil</option>
+            <option value="mx">Mexico</option>
+            <option value="ar">Argentina</option>
+            <option value="za">South Africa</option>
+            <option value="ae">United Arab Emirates</option>
+            <option value="sa">Saudi Arabia</option>
+            <option value="eg">Egypt</option>
+            <option value="ng">Nigeria</option>
+
+
+          </select>
+        </div>
+        <nav class="top-nav" aria-label="Utility Navigation">
+          <ul>
+            <li><a href="seller/register.html">Sell on Shupping</a></li>
+            <li><a href="track-order.html">Track Order</a></li>
+            <li><a href="help.html">Help &amp; Support</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <div class="main-nav-container">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html" aria-label="Shupping Home">
+            <img src="/project-root/assets/logo/shupping-logo-light.svg" alt="Shupping Logo" />
+          </a>
+        </div>
+        <div class="search-container">
+          <form action="/search" method="get" role="search">
+            <div class="category-select">
+              <label for="category" class="sr-only">Select category</label>
+              <select name="category" id="category" aria-label="Select category">
+                <option value="all">All Categories</option>
+                <option value="electronics">Electronics</option>
+                <option value="fashion">Fashion</option>
+                <option value="home">Home &amp; Garden</option>
+                <option value="sports">Sports</option>
+              </select>
+            </div>
+            <label for="q" class="sr-only">Search products</label>
+            <input type="search" id="q" name="q" placeholder="Search for anything" aria-label="Search products" required />
+            <button type="submit" class="search-button">
+              <span class="sr-only">Search</span>
+              <i class="search-icon"></i>
+            </button>
+          </form>
+        </div>
+        <div class="user-actions">
+          <a href="login.html" class="user-link">
+            <i class="user-icon"></i>
+            <span>Sign In</span>
+          </a>
+          <a href="wishlist.html" class="wishlist-link">
+            <i class="heart-icon"></i>
+            <span>Wishlist</span>
+          </a>
+          <a href="cart.html" class="cart-link">
+            <i class="cart-icon"></i>
+            <span class="cart-count">0</span>
+            <span>Cart</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category Navigation -->
+    <nav class="category-nav" aria-label="Main Categories">
+      <div class="container">
+        <ul>
+          <li><a href="categories/deals.html">Today's Deals</a></li>
+          <li><a href="categories/new.html">New Arrivals</a></li>
+          <li><a href="categories/trending.html">Trending</a></li>
+          <li><a href="categories/electronics.html">Electronics</a></li>
+          <li><a href="categories/fashion.html">Fashion</a></li>
+          <li><a href="categories/home.html">Home &amp; Garden</a></li>
+          <li><a href="categories/sports.html">Sports</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Slider -->
+    <section class="hero-slider" aria-label="Featured promotions">
+      <div class="slider-container">
+        <div class="slide active">
+          <img src="/project-root/assets/valentine's day/Untitled (LinkedIn Article Cover Image).png" alt="Special Halloween's Day Deals" />
+          <div class="slide-content">
+            <h2>Holloween's Special</h2>
+            <p>Up to 50% off on selected items</p>
+            <a href="categories/deals.html" class="cta-button">Shop Now</a>
+          </div>
+        </div>
+      </div>
+      <button class="slider-nav prev" aria-label="Previous slide">❮</button>
+      <button class="slider-nav next" aria-label="Next slide">❯</button>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="featured-categories container">
+      <h2>Shop by Category</h2>
+      <div class="category-grid">
+        <a href="categories/electronics.html" class="category-card">
+          <img src="/project-root/assets/electronics/istockphoto-178716575-612x612.jpg" alt="Electronics" />
+          <h3>Electronics</h3>
+        </a>
+        <a href="categories/fashion.html" class="category-card">
+          <img src="/project-root//assets/fashion/b126fdde-4013-4a82-bfe9-d2eaa46d6dfd.webp" alt="Fashion" />
+          <h3>Fashion</h3>
+        </a>
+        <a href="categories/home.html" class="category-card">
+          <img src="https://via.placeholder.com/200x200?text=Home+%26+Garden" alt="Home &amp; Garden" />
+          <h3>Home &amp; Garden</h3>
+        </a>
+        <a href="categories/sports.html" class="category-card">
+          <img src="https://via.placeholder.com/200x200?text=Sports" alt="Sports" />
+          <h3>Sports</h3>
+        </a>
+      </div>
+    </section>
+
+    <!-- Flash Deals -->
+    <section class="flash-deals container">
+      <div class="section-header">
+        <h2>Flash Deals</h2>
+        <div class="countdown" data-end="2026-04-21T23:59:59">
+          <span class="hours">12</span>:<span class="minutes">30</span>:<span class="seconds">00</span>
+        </div>
+      </div>
+      <div class="products-grid">
+        <!-- Product cards dynamically populated by js/home.js using products.deals -->
+      </div>
+    </section>
+
+    <!-- Trending Products -->
+    <section class="trending-products container">
+      <h2>Trending Now</h2>
+      <div class="products-grid">
+        <!-- Product cards dynamically populated by js/home.js using products.trending -->
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features container">
+      <div class="feature-grid">
+        <div class="feature-card">
+          <i class="shipping-icon" aria-hidden="true"></i>
+          <h3>Free Shipping</h3>
+          <p>On orders over $50</p>
+        </div>
+        <div class="feature-card">
+          <i class="returns-icon" aria-hidden="true"></i>
+          <h3>Easy Returns</h3>
+          <p>30-day return policy</p>
+        </div>
+        <div class="feature-card">
+          <i class="secure-icon" aria-hidden="true"></i>
+          <h3>Secure Shopping</h3>
+          <p>100% secure checkout</p>
+        </div>
+        <div class="feature-card">
+          <i class="support-icon" aria-hidden="true"></i>
+          <h3>24/7 Support</h3>
+          <p>Round the clock assistance</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content container">
+      <div class="footer-section">
+        <h4>Customer Service</h4>
+        <ul>
+          <li><a href="help.html">Help Center</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="shipping.html">Shipping Info</a></li>
+          <li><a href="returns.html">Returns</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>About Shupping</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="press.html">Press Center</a></li>
+          <li><a href="investors.html">Investor Relations</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Make Money with Us</h4>
+        <ul>
+          <li><a href="seller/register.html">Sell on Shupping</a></li>
+          <li><a href="affiliate.html">Become an Affiliate</a></li>
+          <li><a href="advertise.html">Advertise Your Products</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Stay Connected</h4>
+        <div class="social-links">
+          <a href="#" aria-label="Follow us on Facebook"><i class="facebook-icon" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Follow us on Twitter"><i class="twitter-icon" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Follow us on Instagram"><i class="instagram-icon" aria-hidden="true"></i></a>
+        </div>
+        <div class="newsletter">
+          <h5>Subscribe to our newsletter</h5>
+          <form action="/subscribe" method="post">
+            <label for="newsletter-email" class="sr-only">Enter your email</label>
+            <input type="email" id="newsletter-email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2025 Shupping. All Rights 2025.</p>
+        <div class="footer-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+          <a href="accessibility.html">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript Files -->
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

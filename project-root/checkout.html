@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout - Shupping</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/cart.css" />
+  <style>
+    /* Additional styles for checkout page */
+    .checkout-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .order-summary, .checkout-form {
+      flex: 1;
+      min-width: 300px;
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    .order-summary h2,
+    .checkout-form h2 {
+      margin-top: 0;
+    }
+    .checkout-form label {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+    .checkout-form input, .checkout-form select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    .checkout-form button {
+      background: #28a745;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      cursor: pointer;
+      font-size: 1em;
+      border-radius: 3px;
+    }
+    /* Payment Options */
+    .payment-options {
+      margin: 15px 0;
+    }
+    .payment-options label {
+      margin-right: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <a href="index.html" class="logo">Shupping</a>
+      <nav class="top-nav" aria-label="Secondary Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="checkout.html" aria-current="page">Checkout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <h1>Checkout</h1>
+    <div class="checkout-container">
+      <!-- Order Summary Section -->
+      <section class="order-summary">
+        <h2>Order Summary</h2>
+        <div id="order-summary-items">
+          <!-- Order items will be populated here dynamically -->
+        </div>
+        <p class="order-total">Total: <span id="order-total">$0.00</span></p>
+      </section>
+
+      <!-- Shipping, Payment & BNPL Option Form -->
+      <section class="checkout-form">
+        <h2>Shipping &amp; Payment Information</h2>
+        <form id="checkout-form">
+          <h3>Shipping Address</h3>
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" name="full-name" required />
+
+          <label for="address">Address</label>
+          <input type="text" id="address" name="address" required />
+
+          <label for="city">City</label>
+          <input type="text" id="city" name="city" required />
+
+          <label for="state">State/Province</label>
+          <input type="text" id="state" name="state" required />
+
+          <label for="zip">ZIP/Postal Code</label>
+          <input type="text" id="zip" name="zip" required />
+
+          <label for="country">Country</label>
+          <select id="country" name="country" required>
+            <option value="us">United States</option>
+            <option value="uk">United Kingdom</option>
+            <option value="ca">Canada</option>
+            <!-- More countries as needed -->
+          </select>
+
+          <h3>Payment Information</h3>
+          <!-- Payment Options: Pay Now or Buy Now, Pay Later (BNPL) -->
+          <div class="payment-options">
+            <label>
+              <input type="radio" name="payment-option" value="pay-now" checked required>
+              Pay Now
+            </label>
+            <label>
+              <input type="radio" name="payment-option" value="bnpl" required>
+              Buy Now, Pay Later
+            </label>
+          </div>
+
+          <label for="card-number">Card Number</label>
+          <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required />
+
+          <label for="expiry-date">Expiry Date</label>
+          <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required />
+
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" name="cvv" placeholder="123" required />
+
+          <button type="submit">Place Order</button>
+        </form>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Shupping. All Rights 2025.</p>
+    </div>
+  </footer>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

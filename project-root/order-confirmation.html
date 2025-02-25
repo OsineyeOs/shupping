@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Order Confirmation - Shupping</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <style>
+    .confirmation-container {
+      text-align: center;
+      padding: 40px;
+    }
+    .confirmation-container h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+    .confirmation-container p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+    .confirmation-container a {
+      background: #28a745;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <a href="index.html" class="logo">Shupping</a>
+    </div>
+  </header>
+  <main class="container">
+    <div class="confirmation-container">
+      <h1>Thank You for Your Order!</h1>
+      <p>Your order has been successfully placed. Your order number is <strong>#<span id="order-number"></span></strong>.</p>
+      <p>You will receive a confirmation email shortly with the order details.</p>
+      <a href="index.html">Return to Home</a>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Shupping. All Rights 2025.</p>
+    </div>
+  </footer>
+  <script>
+    // Generate a random order number and display it
+    document.getElementById('order-number').textContent = Math.floor(Math.random() * 1000000);
+  </script>
+</body>
+</html>

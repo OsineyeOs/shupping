@@ -1,0 +1,262 @@
+/* Hero Slider */
+.hero-slider {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  position: relative;
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+.slide-content {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.slide-content h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.slide-content p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+/* Slider Navigation */
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #fff;
+  font-size: 2em;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slider-nav.prev {
+  left: 10px;
+}
+
+.slider-nav.next {
+  right: 10px;
+}
+
+/* Featured Categories */
+.featured-categories {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.featured-categories h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.category-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.category-card {
+  display: block;
+  width: 200px;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+}
+
+.category-card img {
+  width: 100%;
+  height: auto;
+}
+
+.category-card h3 {
+  padding: 10px 0;
+}
+
+/* Flash Deals & Trending Products */
+.flash-deals,
+.trending-products {
+  margin-bottom: 40px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.countdown {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Features Section */
+.features {
+  margin-bottom: 40px;
+}
+
+.feature-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.feature-card {
+  background: #f9f9f9;
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.feature-card i {
+  font-size: 2em;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.feature-card h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Product Card Action Buttons */
+.product-card .action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.product-card button {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+}
+
+.product-card .add-to-cart {
+  background-color: #333;
+  color: #fff;
+}
+
+.product-card .buy-now {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.product-card .add-to-cart:hover {
+  background-color: #555;
+}
+
+.product-card .buy-now:hover {
+  background-color: #218838;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .slide-content h2 {
+    font-size: 2em;
+  }
+  .slide-content p {
+    font-size: 1em;
+  }
+  .cta-button {
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-nav {
+    font-size: 1.5em;
+    padding: 5px;
+  }
+  .feature-card {
+    width: 100%;
+  }
+}
+.product-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.product-card img:hover {
+  transform: scale(1.1);
+}
+.action-buttons button {
+  width: 100px;
+  padding: 10px;
+  margin: 5px;
+  font-size: 14px;
+}
+.main-nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.logo img {
+  max-width: 250px;
+  height: auto;
+}
